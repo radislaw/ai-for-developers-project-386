@@ -1,0 +1,84 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1780128168891,
+  "projectRoot": "/Users/radislavalilov/WebstormProjects/ai-for-developers-project-386",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      }
+    ],
+    "frameworks": [],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {
+      "compile": "tsp compile ."
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "docs"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 1,
+      "lastAccessed": 1780128168812,
+      "keyFiles": []
+    },
+    "tsp-output": {
+      "path": "tsp-output",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1780128168820,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "AGENTS.md",
+      "accessCount": 1,
+      "lastAccessed": 1780128247726,
+      "type": "file"
+    },
+    {
+      "path": "main.tsp",
+      "accessCount": 1,
+      "lastAccessed": 1780128251915,
+      "type": "file"
+    },
+    {
+      "path": "tsp-output/@typespec/openapi3/openapi.yaml",
+      "accessCount": 1,
+      "lastAccessed": 1780128252305,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
