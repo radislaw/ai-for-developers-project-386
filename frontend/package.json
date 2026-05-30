@@ -10,8 +10,23 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@hookform/resolvers": "^5.4.0",
+    "@mantine/core": "^9.2.2",
+    "@mantine/dates": "^9.2.2",
+    "@mantine/form": "^9.2.2",
+    "@mantine/hooks": "^9.2.2",
+    "@tanstack/react-query": "^5.100.14",
+    "axios": "^1.16.1",
+    "dayjs": "^1.11.21",
+    "postcss": "^8.5.15",
+    "postcss-preset-mantine": "^1.18.0",
+    "postcss-simple-vars": "^7.0.1",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react-dom": "^19.2.6",
+    "react-hook-form": "^7.76.1",
+    "react-router-dom": "^7.16.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
