@@ -15,6 +15,7 @@ export function useCreateBooking() {
     mutationFn: (payload: CreateBookingPayload) => createBooking(payload),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['upcomingBookings'] });
+      queryClient.invalidateQueries({ queryKey: ['slots'] });
     },
   });
 }

@@ -5,5 +5,6 @@ export function useOwner() {
   return useQuery({
     queryKey: ['owner'],
     queryFn: getOwner,
+    staleTime: 10 * 60 * 1000,
   });
 }

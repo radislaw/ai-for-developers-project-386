@@ -62,6 +62,12 @@
   },
   "hotPaths": [
     {
+      "path": "tsp-output/@typespec/openapi3/openapi.yaml",
+      "accessCount": 4,
+      "lastAccessed": 1780148033262,
+      "type": "file"
+    },
+    {
       "path": "frontend/src/components/admin/EventTypeForm.tsx",
       "accessCount": 3,
       "lastAccessed": 1780133334299,
@@ -74,39 +80,45 @@
       "type": "file"
     },
     {
-      "path": "frontend/src/types/index.ts",
-      "accessCount": 2,
-      "lastAccessed": 1780132818823,
-      "type": "file"
-    },
-    {
-      "path": "tsp-output/@typespec/openapi3/openapi.yaml",
-      "accessCount": 2,
-      "lastAccessed": 1780132833744,
-      "type": "file"
-    },
-    {
       "path": "frontend/src/api/eventTypes.ts",
+      "accessCount": 3,
+      "lastAccessed": 1780147848342,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/types/index.ts",
+      "accessCount": 3,
+      "lastAccessed": 1780147854339,
+      "type": "file"
+    },
+    {
+      "path": "main.tsp",
       "accessCount": 2,
-      "lastAccessed": 1780132864323,
+      "lastAccessed": 1780147837535,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/api/client.ts",
+      "accessCount": 2,
+      "lastAccessed": 1780147846392,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/hooks/useEventTypes.ts",
+      "accessCount": 2,
+      "lastAccessed": 1780147875105,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/hooks/useSlots.ts",
+      "accessCount": 2,
+      "lastAccessed": 1780147875761,
       "type": "file"
     },
     {
       "path": "AGENTS.md",
       "accessCount": 1,
       "lastAccessed": 1780128247726,
-      "type": "file"
-    },
-    {
-      "path": "main.tsp",
-      "accessCount": 1,
-      "lastAccessed": 1780128251915,
-      "type": "file"
-    },
-    {
-      "path": "frontend/src/api/client.ts",
-      "accessCount": 1,
-      "lastAccessed": 1780130057891,
       "type": "file"
     },
     {
@@ -152,21 +164,9 @@
       "type": "file"
     },
     {
-      "path": "frontend/src/hooks/useSlots.ts",
-      "accessCount": 1,
-      "lastAccessed": 1780130070274,
-      "type": "file"
-    },
-    {
       "path": "frontend/src/main.tsx",
       "accessCount": 1,
       "lastAccessed": 1780130071506,
-      "type": "file"
-    },
-    {
-      "path": "frontend/src/hooks/useEventTypes.ts",
-      "accessCount": 1,
-      "lastAccessed": 1780132850835,
       "type": "file"
     },
     {
@@ -179,6 +179,84 @@
       "path": "frontend/src/components/admin/UpcomingList.tsx",
       "accessCount": 1,
       "lastAccessed": 1780133333544,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/api/bookings.ts",
+      "accessCount": 1,
+      "lastAccessed": 1780147848078,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/api/owner.ts",
+      "accessCount": 1,
+      "lastAccessed": 1780147848298,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/api/slots.ts",
+      "accessCount": 1,
+      "lastAccessed": 1780147848829,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/hooks/useBookings.ts",
+      "accessCount": 1,
+      "lastAccessed": 1780147876764,
+      "type": "file"
+    },
+    {
+      "path": "backend/package.json",
+      "accessCount": 1,
+      "lastAccessed": 1780148064064,
+      "type": "file"
+    },
+    {
+      "path": "backend/tsconfig.json",
+      "accessCount": 1,
+      "lastAccessed": 1780148069103,
+      "type": "file"
+    },
+    {
+      "path": "backend/src/types.ts",
+      "accessCount": 1,
+      "lastAccessed": 1780148072400,
+      "type": "file"
+    },
+    {
+      "path": "backend/src/store.ts",
+      "accessCount": 1,
+      "lastAccessed": 1780148074657,
+      "type": "file"
+    },
+    {
+      "path": "backend/src/routes/owner.ts",
+      "accessCount": 1,
+      "lastAccessed": 1780148079670,
+      "type": "file"
+    },
+    {
+      "path": "backend/src/routes/eventTypes.ts",
+      "accessCount": 1,
+      "lastAccessed": 1780148083976,
+      "type": "file"
+    },
+    {
+      "path": "backend/src/routes/slots.ts",
+      "accessCount": 1,
+      "lastAccessed": 1780148093075,
+      "type": "file"
+    },
+    {
+      "path": "backend/src/routes/bookings.ts",
+      "accessCount": 1,
+      "lastAccessed": 1780148099517,
+      "type": "file"
+    },
+    {
+      "path": "backend/src/index.ts",
+      "accessCount": 1,
+      "lastAccessed": 1780148107060,
       "type": "file"
     }
   ],

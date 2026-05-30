@@ -5,6 +5,7 @@ export function useEventTypes() {
   return useQuery({
     queryKey: ['eventTypes'],
     queryFn: listEventTypes,
+    staleTime: 5 * 60 * 1000,
   });
 }
 
@@ -13,6 +14,7 @@ export function useEventType(eventTypeId: string) {
     queryKey: ['eventType', eventTypeId],
     queryFn: () => getEventType(eventTypeId),
     enabled: !!eventTypeId,
+    staleTime: 5 * 60 * 1000,
   });
 }
 
