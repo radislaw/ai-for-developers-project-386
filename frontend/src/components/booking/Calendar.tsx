@@ -1,21 +1,22 @@
-import { useState, useMemo } from 'react';
+import { useMemo } from 'react';
 import { Box, Text, Group, SimpleGrid, UnstyledButton } from '@mantine/core';
 import { ChevronLeft, ChevronRight } from 'tabler-icons-react';
-import dayjs from 'dayjs';
+import dayjs, { type Dayjs } from 'dayjs';
 
 interface CalendarProps {
   selectedDate: Date | null;
   onDateSelect: (date: Date) => void;
+  currentMonth: Dayjs;
+  onMonthChange: (month: Dayjs) => void;
   slotsData?: { date: string; hasSlots: boolean }[];
 }
 
-export function Calendar({ selectedDate, onDateSelect, slotsData = [] }: CalendarProps) {
-  const [currentMonth, setCurrentMonth] = useState(dayjs());
+export function Calendar({ selectedDate, onDateSelect, currentMonth, onMonthChange, slotsData = [] }: CalendarProps) {
 
   const daysInMonth = useMemo(() => {
     const start = currentMonth.startOf('month');
     const end = currentMonth.endOf('month');
-    const startDay = start.day();
+    const startDay = (start.day() + 6) % 7; // Mon-first grid
     const days: (dayjs.Dayjs | null)[] = [];
 
     for (let i = 0; i < startDay; i++) {
@@ -46,11 +47,11 @@ export function Calendar({ selectedDate, onDateSelect, slotsData = [] }: Calenda
   return (
     <Box>
       <Group justify="space-between" mb="md">
-        <UnstyledButton onClick={() => setCurrentMonth((m) => m.subtract(1, 'month'))}>
+        <UnstyledButton onClick={() => onMonthChange(currentMonth.subtract(1, 'month'))}>
           <ChevronLeft size={20} />
         </UnstyledButton>
         <Text fw={600}>{currentMonth.format('MMMM YYYY')}</Text>
-        <UnstyledButton onClick={() => setCurrentMonth((m) => m.add(1, 'month'))}>
+        <UnstyledButton onClick={() => onMonthChange(currentMonth.add(1, 'month'))}>
           <ChevronRight size={20} />
         </UnstyledButton>
       </Group>

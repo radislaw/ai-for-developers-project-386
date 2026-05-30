@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Box, Title, Text, Card, Stack, Grid, Skeleton, Group, Badge, Divider } from '@mantine/core';
 import { Clock, Calendar as CalendarIcon } from 'tabler-icons-react';
-import dayjs from 'dayjs';
+import dayjs, { type Dayjs } from 'dayjs';
 import { useEventType } from '../hooks/useEventTypes';
 import { useSlots } from '../hooks/useSlots';
 import { useCreateBooking } from '../hooks/useBookings';
@@ -16,6 +16,7 @@ type Step = 'select-date' | 'select-slot' | 'fill-form';
 export function Book() {
   const { eventTypeId } = useParams<{ eventTypeId: string }>();
   const navigate = useNavigate();
+  const [currentMonth, setCurrentMonth] = useState<Dayjs>(dayjs());
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedSlot, setSelectedSlot] = useState<Slot | null>(null);
   const [step, setStep] = useState<Step>('select-date');
@@ -23,15 +24,8 @@ export function Book() {
   const { data: eventType, isLoading: isEventTypeLoading } = useEventType(eventTypeId || '');
   const createBooking = useCreateBooking();
 
-  const monthStart = useMemo(() => {
-    const date = selectedDate || dayjs().toDate();
-    return dayjs(date).startOf('month').toDate();
-  }, [selectedDate]);
-
-  const monthEnd = useMemo(() => {
-    const date = selectedDate || dayjs().toDate();
-    return dayjs(date).endOf('month').toDate();
-  }, [selectedDate]);
+  const monthStart = useMemo(() => currentMonth.startOf('month').toDate(), [currentMonth]);
+  const monthEnd = useMemo(() => currentMonth.endOf('month').toDate(), [currentMonth]);
 
   const { data: slots, isLoading: isSlotsLoading } = useSlots(
     eventTypeId || '',
@@ -54,7 +48,7 @@ export function Book() {
 
   const handleSlotSelect = (slot: Slot) => {
     setSelectedSlot(slot);
-    setStep('select-slot');
+    setStep('fill-form');
   };
 
   const handleBookingSubmit = (data: { guestName: string; guestEmail: string; guestNotes?: string }) => {
@@ -147,6 +141,8 @@ export function Book() {
           <Calendar
             selectedDate={selectedDate}
             onDateSelect={handleDateSelect}
+            currentMonth={currentMonth}
+            onMonthChange={setCurrentMonth}
             slotsData={slotsData}
           />
         </Card>

@@ -46,15 +46,9 @@ export function AppLayout({ children }: AppShellProps) {
             label="Записаться"
             leftSection={<Calendar size={20} />}
             active={location.pathname.startsWith('/book')}
-            styles={{
-              root: {
-                borderRadius: '8px',
-                '&[data-active]': {
-                  backgroundColor: '#FFF7ED',
-                  color: '#F97316',
-                },
-              },
-            }}
+            color="orange"
+            variant="light"
+            style={{ borderRadius: '8px' }}
           />
           <NavLink
             component={Link}
@@ -62,15 +56,9 @@ export function AppLayout({ children }: AppShellProps) {
             label="Админка"
             leftSection={<Settings size={20} />}
             active={location.pathname.startsWith('/admin')}
-            styles={{
-              root: {
-                borderRadius: '8px',
-                '&[data-active]': {
-                  backgroundColor: '#FFF7ED',
-                  color: '#F97316',
-                },
-              },
-            }}
+            color="orange"
+            variant="light"
+            style={{ borderRadius: '8px' }}
           />
         </Stack>
         <Text c="dimmed" size="xs" mt="auto" pt="md">

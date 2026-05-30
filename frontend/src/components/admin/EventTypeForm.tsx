@@ -1,4 +1,4 @@
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Stack, TextInput, NumberInput, Button, Text, Card } from '@mantine/core';
@@ -19,6 +19,7 @@ export function EventTypeForm() {
     register,
     handleSubmit,
     reset,
+    control,
     formState: { errors },
   } = useForm<EventTypeFormData>({
     resolver: zodResolver(eventTypeSchema),
@@ -60,14 +61,22 @@ export function EventTypeForm() {
               required
             />
 
-            <NumberInput
-              label="Длительность (минуты)"
-              min={15}
-              max={480}
-              step={15}
-              {...register('durationMinutes', { valueAsNumber: true })}
-              error={errors.durationMinutes?.message}
-              required
+            <Controller
+              name="durationMinutes"
+              control={control}
+              render={({ field }) => (
+                <NumberInput
+                  label="Длительность (минуты)"
+                  min={15}
+                  max={480}
+                  step={15}
+                  value={field.value}
+                  onChange={(val) => field.onChange(typeof val === 'number' ? val : Number(val))}
+                  onBlur={field.onBlur}
+                  error={errors.durationMinutes?.message}
+                  required
+                />
+              )}
             />
 
             <Button

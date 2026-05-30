@@ -6,8 +6,8 @@ export const listSlots = async (
   from: string,
   to: string
 ): Promise<Slot[]> => {
-  const response = await api.get<{ slots: Slot[] }>(`/event-types/${eventTypeId}/slots`, {
+  const response = await api.get<Slot[]>(`/event-types/${eventTypeId}/slots`, {
     params: { from, to },
   });
-  return response.data.slots;
+  return response.data;
 };

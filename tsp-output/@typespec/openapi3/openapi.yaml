@@ -82,6 +82,15 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/EventType'
+              example:
+                - id: "evt-15min"
+                  title: "Встреча 15 минут"
+                  description: "Короткий тип события для быстрого слота."
+                  durationMinutes: 15
+                - id: "evt-30min"
+                  title: "Встреча 30 минут"
+                  description: "Базовый тип события для бронирования."
+                  durationMinutes: 30
     post:
       operationId: EventTypeOperations_createEventType
       parameters: []
@@ -164,6 +173,56 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Slot'
+              example:
+                - startAt: "2026-05-30T09:00:00Z"
+                  endAt: "2026-05-30T09:15:00Z"
+                  available: false
+                  bookingId: "booking-001"
+                - startAt: "2026-05-30T09:15:00Z"
+                  endAt: "2026-05-30T09:30:00Z"
+                  available: true
+                - startAt: "2026-05-30T09:30:00Z"
+                  endAt: "2026-05-30T09:45:00Z"
+                  available: true
+                - startAt: "2026-05-30T10:00:00Z"
+                  endAt: "2026-05-30T10:15:00Z"
+                  available: true
+                - startAt: "2026-05-30T10:15:00Z"
+                  endAt: "2026-05-30T10:30:00Z"
+                  available: false
+                  bookingId: "booking-002"
+                - startAt: "2026-06-02T09:00:00Z"
+                  endAt: "2026-06-02T09:15:00Z"
+                  available: true
+                - startAt: "2026-06-02T09:15:00Z"
+                  endAt: "2026-06-02T09:30:00Z"
+                  available: true
+                - startAt: "2026-06-02T10:00:00Z"
+                  endAt: "2026-06-02T10:15:00Z"
+                  available: false
+                  bookingId: "booking-003"
+                - startAt: "2026-06-03T09:00:00Z"
+                  endAt: "2026-06-03T09:15:00Z"
+                  available: true
+                - startAt: "2026-06-03T09:30:00Z"
+                  endAt: "2026-06-03T09:45:00Z"
+                  available: true
+                - startAt: "2026-06-04T11:00:00Z"
+                  endAt: "2026-06-04T11:15:00Z"
+                  available: true
+                - startAt: "2026-06-04T11:15:00Z"
+                  endAt: "2026-06-04T11:30:00Z"
+                  available: true
+                - startAt: "2026-06-05T14:00:00Z"
+                  endAt: "2026-06-05T14:15:00Z"
+                  available: true
+                - startAt: "2026-06-06T09:00:00Z"
+                  endAt: "2026-06-06T09:15:00Z"
+                  available: false
+                  bookingId: "booking-004"
+                - startAt: "2026-06-06T09:15:00Z"
+                  endAt: "2026-06-06T09:30:00Z"
+                  available: true
         '400':
           description: The server could not understand the request due to invalid syntax.
           content:
@@ -213,23 +272,31 @@ components:
       properties:
         id:
           type: string
+          example: "booking-001"
         eventTypeId:
           type: string
+          example: "evt-15min"
         guestName:
           type: string
+          example: "Иван Иванов"
         guestEmail:
           type: string
+          example: "ivan@example.com"
         guestNotes:
           type: string
+          example: "Хочу обсудить проект"
         startAt:
           type: string
           format: date-time
+          example: "2026-06-15T10:00:00Z"
         endAt:
           type: string
           format: date-time
+          example: "2026-06-15T10:15:00Z"
         createdAt:
           type: string
           format: date-time
+          example: "2026-06-01T09:00:00Z"
     ConflictError:
       type: object
       required:
@@ -263,13 +330,17 @@ components:
       properties:
         id:
           type: string
+          example: "evt-15min"
         title:
           type: string
+          example: "Встреча 15 минут"
         description:
           type: string
+          example: "Короткий тип события для быстрого слота."
         durationMinutes:
           type: integer
           format: int32
+          example: 15
     NotFoundError:
       type: object
       required:
@@ -291,12 +362,16 @@ components:
       properties:
         id:
           type: string
+          example: "owner-1"
         name:
           type: string
+          example: "Tota"
         title:
           type: string
+          example: "Host"
         timezone:
           type: string
+          example: "Europe/Moscow"
     Slot:
       type: object
       required:
@@ -307,13 +382,17 @@ components:
         startAt:
           type: string
           format: date-time
+          example: "2026-06-15T10:00:00Z"
         endAt:
           type: string
           format: date-time
+          example: "2026-06-15T10:15:00Z"
         available:
           type: boolean
+          example: true
         bookingId:
           type: string
+          example: "booking-001"
 servers:
   - url: https://api.example.com
     description: Production server

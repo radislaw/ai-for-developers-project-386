@@ -62,6 +62,36 @@
   },
   "hotPaths": [
     {
+      "path": "frontend/src/components/admin/EventTypeForm.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1780133334299,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/pages/Admin.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1780133363809,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/types/index.ts",
+      "accessCount": 2,
+      "lastAccessed": 1780132818823,
+      "type": "file"
+    },
+    {
+      "path": "tsp-output/@typespec/openapi3/openapi.yaml",
+      "accessCount": 2,
+      "lastAccessed": 1780132833744,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/api/eventTypes.ts",
+      "accessCount": 2,
+      "lastAccessed": 1780132864323,
+      "type": "file"
+    },
+    {
       "path": "AGENTS.md",
       "accessCount": 1,
       "lastAccessed": 1780128247726,
@@ -74,9 +104,81 @@
       "type": "file"
     },
     {
-      "path": "tsp-output/@typespec/openapi3/openapi.yaml",
+      "path": "frontend/src/api/client.ts",
       "accessCount": 1,
-      "lastAccessed": 1780128252305,
+      "lastAccessed": 1780130057891,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/App.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780130058425,
+      "type": "file"
+    },
+    {
+      "path": "frontend/package.json",
+      "accessCount": 1,
+      "lastAccessed": 1780130058803,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/pages/Book.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780130063317,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/pages/Home.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780130063908,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/components/booking/Calendar.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780130064316,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/components/booking/SlotList.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780130064834,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/components/booking/BookingForm.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780130069815,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/hooks/useSlots.ts",
+      "accessCount": 1,
+      "lastAccessed": 1780130070274,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/main.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780130071506,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/hooks/useEventTypes.ts",
+      "accessCount": 1,
+      "lastAccessed": 1780132850835,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/components/Layout/AppShell.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780133326348,
+      "type": "file"
+    },
+    {
+      "path": "frontend/src/components/admin/UpcomingList.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780133333544,
       "type": "file"
     }
   ],
